@@ -19,11 +19,13 @@
 h1{
     font-size: 84px;
     opacity: 100%;
+ justify-content: center;   
 }
 
 
 .nav-item{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
+    text-shadow:1px 1px 0px red;  
 }
 
 .splash-text{
@@ -71,9 +73,44 @@ h1{
 .about-text h2{
     font-size: 56px;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    text-shadow:2px 2px 0px red;
 }
 
 .about-text p{
     font-size: 24px;
     font-family:'Times New Roman', Times, serif
+}
+
+.carousel{
+    display: flex;
+    justify-content: center;
+    height: 600px;
+    width: 900px;
+    margin-bottom: 1rem;
+    padding: 10px;
+}
+
+.carousel-inner {
+    border-style: solid;
+    border-color: red;
+    border-width: 10px;
+    object-fit: fill;
+    object-position: center;
+   
+    width: 100%;
+    
+}
+
+.carousel img{
+    height: 600px;
+    width: 100%;
+    padding: 10px 10px 50px 10px;
+}
+
+.fav-text{
+    justify-content: center;
+    margin-top: 2rem;
+    font-size: 64px;
+    font-family: 'Anton SC', sans-serif;
+    text-shadow:2px 2px 0px red;
 }
