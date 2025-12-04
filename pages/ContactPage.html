@@ -11,44 +11,97 @@
 </head>
 
 <body>
+    <!-- NavBar Start -->
+    <nav class="navbar navbar-expand-lg" style="background-color: #560000;">
+        <div class="container-fluid">
 
-   
-    <div class="bgContact ">
-        <div class="row ">
-            <div class="col"></div>
+            <!-- Logo on the left -->
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <img src="/assets/Logo.png" alt="Logo" style="height:125px; width:auto; object-fit:contain;">
+            </a>
+
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <!-- Links on the right -->
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav d-flex flex-row gap-5" style="padding-top:60px; margin-right:80px;">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="#" style="font-size:1.75rem; color:white;">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-size:1.75rem; color:white;">Order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" style="font-size:1.75rem; color:white;">Contact</a>
+                    </li>
+                </ul>
+            </div>
+
         </div>
-    </div>
+    </nav>
+    <!-- NavBar End -->
 
+    <!-- Input Text Start -->
+    <div class="bgContact container-fluid">
+
+        <div class="formWrap">
+
+            <div class="formRow">
+                <span class="leftLabel">Name:</span>
+                <input type="text" class="textBox">
+            </div>
+
+            <div class="formRow">
+                <span class="leftLabel">Email:</span>
+                <input type="text" class="textBox">
+            </div>
+
+            <div class="formRow">
+                <span class="leftLabel">Phone #:</span>
+                <input type="text" class="textBox">
+            </div>
+
+            <div class="commentRow">
+                <span class="leftLabel">Comments:</span>
+                <textarea class="commentBox"></textarea>
+            </div>
+
+        </div>
+
+    </div>
+    <!-- Input Text End -->
+
+    <!-- Footer Start -->
     <div class="footBg alignFt">
         <div class="row">
             <div class="col">
-                <p class="contactFontC">Location <br> Juicy Burger <br> 4105 E Main St, <br> Stockton, CA 95215</p>
+                <p class="contactFontC">
+                    <span class="contactTitle">Location</span> <br>
+                    Juicy Burger <br>
+                    4105 E Main St, <br>
+                    Stockton, CA 95215
+                </p>
             </div>
             <div class="col">
-                <p class="contactFontC">Contact <br> (209) 475-8184 <br> juicyburger24@gmail.com</p>
+                <p class="contactFontC">
+                    <span class="contactTitle">Contact</span> <br>
+                    (209) 475-8184 <br>
+                    juicyburger24@gmail.com
+                </p>
             </div>
             <div class="col">
-                <p class="contactFontC">Business Hours <br> Monday - Sunday: <br> 10:00 am - 11:00 pm</p>
+                <p class="contactFontC">
+                    <span class="contactTitle">Business Hours</span> <br>
+                    Monday - Sunday: <br>
+                    10:00 am - 11:00 pm
+                </p>
             </div>
         </div>
     </div>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    <!-- Footer End -->
 
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"

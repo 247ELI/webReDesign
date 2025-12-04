@@ -27,22 +27,113 @@
 }
 
 /* Foot Start */
-.footBg{
+.footBg {
     background-color: #560000;
     height: 200px;
     display: flex;
-    justify-content: center; 
+    justify-content: center;
+    align-items: center;
 }
 
-.contactFontC{
-    color: white;
+.row {
     display: flex;
+    gap: 50px;
+}
+
+.col {
     text-align: center;
-    margin-top: 50px;
+}
+
+.contactFontC {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1;
+}
+
+.contactTitle {
     font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
 }
 
 /* Foot End */
+.textBox {
+    width: 500px;
+    height: 40px;
+    border-radius: 12px;
+    border: 2px solid #560000;
+    padding: 10px;
+    outline: none;
+}
+
+.commentBox {
+    width: 500px;
+    height: 160px;
+    border-radius: 12px;
+    border: 2px solid #560000;
+    padding: 10px;
+    resize: none;
+}
+
+.bgContact {
+    background-image: url(../assets/Background.png);
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formWrap {
+    width: 650px;
+}
+
+.formRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+}
 
 
+.leftLabel {
+    width: 120px;
+    color: white;
+    font-size: 22px;
+    text-align: left;
+    margin-right: 20px;
+}
 
+.textBox {
+    width: 100%;
+    height: 40px;
+    border-radius: 12px;
+    border: 5px solid #560000;
+    padding: 10px;
+    outline: none;
+}
+
+.commentRow {
+    display: flex;
+    flex-direction: column;
+}
+
+.commentRow .leftLabel {
+    width: auto;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.commentBox {
+    width: 100%;
+    height: 170px;
+    border-radius: 12px;
+    border: 5px solid #560000;
+    padding: 12px;
+    outline: none;
+    resize: none;
+}
