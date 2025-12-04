@@ -1,0 +1,79 @@
+.splash-container{
+    background-image: url(/assets/burger.png);
+    height: 700px;
+    width: 100%;
+    background-size: 100%;
+    object-fit: cover;
+    background-position: center;
+    
+}
+
+.splash-container h1 , h3 {
+    color: white;
+    text-shadow:2px 2px 0px red;
+    font-family: 'Anton SC', sans-serif;
+    opacity: 100%;
+    
+}
+
+h1{
+    font-size: 84px;
+    opacity: 100%;
+}
+
+
+.nav-item{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;   
+}
+
+.splash-text{
+    height: 700px;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    
+    align-content: center;
+    
+}
+
+.about-container{
+    display: grid;
+    grid-template-columns: repeat(2, .5fr);
+    justify-content: center;
+    padding: 50px;
+    text-align: center;
+    background-color: black;
+}
+
+.about-container img{
+    display: flex;
+    object-fit: cover;
+    justify-content: start;
+    width:65%;
+    height: 650px;
+    align-content: center;
+    margin-left: 11rem;
+    object-position: top;
+    border-radius: 2%;
+    
+}
+
+.about-text{
+    width: 500px;
+    color: white;
+    line-height: 2.7rem;
+    height: 600px;
+    margin-left: 5rem;
+    align-content: center;
+    justify-content: center;
+}
+
+.about-text h2{
+    font-size: 56px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.about-text p{
+    font-size: 24px;
+    font-family:'Times New Roman', Times, serif
+}
