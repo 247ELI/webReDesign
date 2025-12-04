@@ -1,0 +1,48 @@
+.imgLogo {
+    width: 150px;
+    height: auto;
+}
+
+.navBar {
+    background-color: #560000;
+    height: 200px;
+}
+
+.bgContact {
+    background-image: url(../assets/Background.png);
+
+    height: 80vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    color: white;
+    text-align: center;
+    font-family: Arial, sans-serif;
+}
+
+/* Foot Start */
+.footBg{
+    background-color: #560000;
+    height: 200px;
+    display: flex;
+    justify-content: center; 
+}
+
+.contactFontC{
+    color: white;
+    display: flex;
+    text-align: center;
+    margin-top: 50px;
+    font-size: 20px;
+}
+
+/* Foot End */
+
+
+
