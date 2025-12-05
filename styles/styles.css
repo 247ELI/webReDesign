@@ -1,29 +1,23 @@
 .menu-box {
+  display: flex;
   height: 200px;
-  border-radius: 12px;
-  overflow: hidden;
   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
   cursor: pointer;
   transition: transform 0.2s;
+  background-color: black;
 }
 
 .menu-box:hover {
   transform: scale(1.02);
 }
 
-.menu-content {
-  display: flex; /* Horizontal split */
-  width: 100%;
-  height: 100%;
-}
-
 .menu-text {
   flex: 1;
-  padding: 15px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #f2e1c4;
+  color: white;
 }
 
 .menu-text h4 {
@@ -33,11 +27,33 @@
 
 .menu-text p {
   margin: 5px 0 0 0;
-  font-size: 0.9rem;
 }
 
-.menu-text button {
-  width: 120px;
+.menu-text .menu-title {
+  font-size: 0.9rem;
+  margin-top: -5px;
+}
+
+.menu-text .menu-desc {
+  font-size: xx-small;
+}
+
+.menu-text .menu-price {
+  font-size: 1rem;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.menu-text .menu-btn {
+  background-color: #560000;
+  color: white;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.menu-text .menu-btn:hover {
+  background-color: #780000;
 }
 
 .menu-img {
@@ -49,4 +65,105 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+}
+
+/* Navbar adjustments */
+.logo-img {
+  height: 125px;
+  width: auto;
+  object-fit: contain;
+}
+
+.nav-links {
+  padding-top: 60px;
+  margin-right: 80px;
+}
+
+.nav-links .nav-link {
+  font-size: 1.75rem;
+  color: white;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .menu-box {
+    flex-direction: row;
+    height: 200px;
+  }
+
+  .menu-img {
+    height: 200px;
+  }
+
+  .menu-text {
+    padding: 15px;
+    text-align: left;
+  }
+
+  /* Only cards 3 and 5 get smaller descriptions */
+  .col-md-6:nth-child(3) .menu-text .menu-desc,
+  .col-md-6:nth-child(5) .menu-text .menu-desc {
+    font-size: 0.75rem;
+  }
+
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    padding-top: 20px;
+    margin-right: 0;
+    text-align: center;
+  }
+
+  .nav-links .nav-link {
+    font-size: 1.5rem;
+  }
+
+  .logo-img {
+    height: 100px;
+  }
+}
+
+@media (max-width: 767px) {
+  .menu-box {
+    flex-direction: row;
+    height: 180px;
+  }
+
+  .menu-text {
+    padding: 10px;
+  }
+
+  .menu-text h4 {
+    font-size: 1.1rem;
+  }
+
+  .menu-text .menu-title {
+    font-size: 0.85rem;
+  }
+
+/* ended up using these functions so i can make the font smaller for just cards 3 and 5 because they would overflow because of the longer description */
+  .col-md-6:nth-child(3) .menu-text .menu-desc,
+  .col-md-6:nth-child(5) .menu-text .menu-desc {
+    font-size: 0.30rem;
+  }
+
+  .menu-text .menu-price {
+    font-size: 0.95rem;
+  }
+
+  .menu-text .menu-btn {
+    width: auto;
+  }
+
+  .menu-img {
+    height: 180px;
+  }
+
+  .nav-links .nav-link {
+    font-size: 1.25rem;
+  }
+
+  .logo-img {
+    height: 80px;
+  }
 }
