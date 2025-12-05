@@ -95,6 +95,17 @@ h1{
     
 }
 
+.carousel-control-prev{
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+}
+.carousel-control-next{
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+}
+
 .carousel-inner {
     border-style:solid;
     border-top-color: #940000;
@@ -476,6 +487,16 @@ button{
         margin-right: 4rem;
     }
 
+    .carousel-control-prev{
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+}
+.carousel-control-next{
+    justify-content: center;
+    align-items: center;
+    margin-top: 20rem;
+}
 
     .carousel{
         max-width:fit-content;
@@ -586,6 +607,18 @@ button{
     width: 100%;
     object-fit: cover;
 }
+
+.carousel-control-prev{
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+.carousel-control-next{
+    justify-content: center;
+    align-items: center;
+    margin-top: 7rem;
+}
+
 
 .footBg{
     height: auto;
