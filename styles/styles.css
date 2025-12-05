@@ -170,6 +170,7 @@ a{
     height: 200px;
 }
 
+/* ELIASAF START */
 .bgContact {
     background-image: url(../assets/Background.png);
 
@@ -406,6 +407,8 @@ a{
     }
 
 }
+
+/* ELIASAF END */
 
 @media (max-width: 768px){
         .navbar-nav {
