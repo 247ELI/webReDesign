@@ -1,6 +1,7 @@
-.navbar-toggler-icon{
-color : white;
+.navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E") !important;
 }
+
 .splash-container{
     background-image:   linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/assets/burger.png);
     height: 700px;
@@ -296,6 +297,21 @@ a{
     padding: 12px;
     outline: none;
     resize: none;
+}
+
+button{
+    background-color: #560000;
+    width: 80px;
+    height:30px;
+}
+
+.textBtn{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    color: white;
+   
+    
 }
 
 @media (max-width: 768px) {
