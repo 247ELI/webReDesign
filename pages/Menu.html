@@ -1,326 +1,556 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Restaurant Menu</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Restaurant Menu</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
 
-  <style>
-    /* Menu styling, there were a lot of conflicts with our tags in our css styling file so i converted my css style into inline styling so there wouldnt be a bunch of  conflicts */
-    .menu-box {
-      display: flex;
-      height: 200px;
-      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-      cursor: pointer;
-      transition: transform 0.2s;
-      background-color: black;
-    }
-    .menu-box:hover { transform: scale(1.02); }
-    
-.nav-item{
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; 
-    text-shadow:1px 1px 0px red;  
+    <style>
+      /* Menu styling, there were a lot of conflicts with our tags in our css styling file so i converted my css style into inline styling so there wouldnt be a bunch of  conflicts */
+      .menu-box {
+        display: flex;
+        height: 200px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        cursor: pointer;
+        transition: transform 0.2s;
+        background-color: black;
+      }
+      .menu-box:hover {
+        transform: scale(1.02);
+      }
+/* Footer Start */
+.cFootBg {
+    background-color: #560000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    flex-wrap: wrap;
 }
-    .menu-text {
-      flex: 1;
-      padding: 20px;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      color: white;
-    }
-    .menu-text h4 { margin: 0; font-size: 1.25rem; }
-    .menu-text p { margin: 5px 0 0 0; }
-    .menu-text .menu-title { font-size: 0.9rem; margin-top: -5px; }
-    .menu-text .menu-desc { font-size: xx-small; }
-    .menu-text .menu-price { font-size: 1rem; font-weight: bold; margin-bottom: 8px; }
-    .menu-text .menu-btn {
-      background-color: #560000;
-      color: white;
-      border: none;
-      padding: 8px 12px;
-      cursor: pointer;
-    }
-    .menu-text .menu-btn:hover { background-color: #780000; }
 
-    .menu-img { flex: 1; overflow: hidden; }
-    .menu-img img { width: 100%; height: 100%; object-fit: cover; }
+.cContactRow {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 1200px;
+}
 
-    
-    .logo-img { height: 125px; width: auto; object-fit: contain; }
-    .nav-links { padding-top: 60px; margin-right: 80px; }
-    .nav-links .nav-link { font-size: 1.75rem; color: white; }
+.cContactCol {
+    text-align: center;
+    flex: 1;
+    min-width: 200px;
+}
 
-    
-    @media (max-width: 991px) {
-      .menu-box { flex-direction: row; height: 200px; }
-      .menu-img { height: 200px; }
-      .menu-text { padding: 15px; text-align: left; }
+.cContactFontC {
+    color: white;
+    margin: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 100;
+}
 
-     
-      .col-md-6:nth-child(3) .menu-text .menu-desc,
-      .col-md-6:nth-child(5) .menu-text .menu-desc {
-        font-size: 0.5rem;
-      }
+.cContactTitle {
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+    font-family: 'Anton SC';
+}
 
-      .nav-links {
+/* Responsive Footer */
+@media (max-width: 768px) {
+    .cContactRow {
         flex-direction: column;
-        gap: 10px;
-        padding-top: 20px;
-        margin-right: 0;
-        text-align: center;
+        gap: 20px;
+        align-items: center;
+    }
+    .cContactCol {
+        width: 100%;
+    }
+    .cContactFontC {
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .cContactTitle {
+        font-size: 18px;
+    }
+}
+
+@media (max-width: 480px) {
+    .cFootBg {
+        padding: 1.5rem 0.5rem;
+    }
+    .cContactFontC {
+        font-size: 13px;
+    }
+    .cContactTitle {
+        font-size: 16px;
+    }
+}
+
+
+      .nav-item {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+        text-shadow: 1px 1px 0px red;
       }
-      .nav-links .nav-link { font-size: 1.5rem; }
-      .logo-img { height: 100px; }
-    }
+      .menu-text {
+        flex: 1;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        color: white;
+      }
+      .menu-text h4 {
+        margin: 0;
+        font-size: 1.25rem;
+      }
+      .menu-text p {
+        margin: 5px 0 0 0;
+      }
+      .menu-text .menu-title {
+        font-size: 0.9rem;
+        margin-top: -5px;
+      }
+      .menu-text .menu-desc {
+        font-size: xx-small;
+      }
+      .menu-text .menu-price {
+        font-size: 1rem;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      .menu-text .menu-btn {
+        background-color: #560000;
+        color: white;
+        border: none;
+        padding: 8px 12px;
+        cursor: pointer;
+      }
+      .menu-text .menu-btn:hover {
+        background-color: #780000;
+      }
 
-    @media (max-width: 767px) {
-      .menu-box { flex-direction: row; height: 180px; }
-      .menu-text { padding: 10px; }
-      .menu-text h4 { font-size: 1.1rem; }
-      .menu-text .menu-title { font-size: 0.85rem; }
-      .col-md-6:nth-child(3) .menu-text .menu-desc,
-      .col-md-6:nth-child(5) .menu-text .menu-desc { font-size: 0.3rem; }
-      .menu-text .menu-price { font-size: 0.95rem; }
-      .menu-text .menu-btn { width: auto; }
-      .menu-img { height: 180px; }
-      .nav-links .nav-link { font-size: 1.25rem; }
-      .logo-img { height: 80px; }
-    }
-  </style>
-</head>
-<body>
+      .menu-img {
+        flex: 1;
+        overflow: hidden;
+      }
+      .menu-img img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+      }
 
-<nav class="navbar navbar-expand-lg" style="background-color: #560000;">
-        <div class="container-fluid">
+      .logo-img {
+        height: 125px;
+        width: auto;
+        object-fit: contain;
+      }
+      .nav-links {
+        padding-top: 60px;
+        margin-right: 80px;
+      }
+      .nav-links .nav-link {
+        font-size: 1.75rem;
+        color: white;
+      }
 
-            <!-- Logo on the left -->
-            <a class="navbar-brand d-flex align-items-center" href="#">
-                <img src="/assets/Logo.png" alt="Logo" style="height:125px; width:auto; object-fit:contain;">
-            </a>
+      @media (max-width: 991px) {
+        .menu-box {
+          flex-direction: row;
+          height: 200px;
+        }
+        .menu-img {
+          height: 200px;
+        }
+        .menu-text {
+          padding: 15px;
+          text-align: left;
+        }
 
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+        .col-md-6:nth-child(3) .menu-text .menu-desc,
+        .col-md-6:nth-child(5) .menu-text .menu-desc {
+          font-size: 0.5rem;
+        }
 
-            <!-- Links on the right -->
-            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav d-flex flex-row gap-5" style="padding-top:60px; margin-right:80px;">
-                    <li class="nav-item">
-                        <a class="nav-link active" href="../index.html" style="font-size:1.75rem; color:white;">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#" style="font-size:1.75rem; color:white;">Order</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="../pages/ContactPage.html"
-                            style="font-size:1.75rem; color:white;">Contact</a>
-                    </li>
-                </ul>
-            </div>
+        .nav-links {
+          flex-direction: column;
+          gap: 10px;
+          padding-top: 20px;
+          margin-right: 0;
+          text-align: center;
+        }
+        .nav-links .nav-link {
+          font-size: 1.5rem;
+        }
+        .logo-img {
+          height: 100px;
+        }
+      }
 
+      @media (max-width: 767px) {
+        .menu-box {
+          flex-direction: row;
+          height: 180px;
+        }
+        .menu-text {
+          padding: 10px;
+        }
+        .menu-text h4 {
+          font-size: 1.1rem;
+        }
+        .menu-text .menu-title {
+          font-size: 0.85rem;
+        }
+        .col-md-6:nth-child(3) .menu-text .menu-desc,
+        .col-md-6:nth-child(5) .menu-text .menu-desc {
+          font-size: 0.3rem;
+        }
+        .menu-text .menu-price {
+          font-size: 0.95rem;
+        }
+        .menu-text .menu-btn {
+          width: auto;
+        }
+        .menu-img {
+          height: 180px;
+        }
+        .nav-links .nav-link {
+          font-size: 1.25rem;
+        }
+        .logo-img {
+          height: 80px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg" style="background-color: #560000">
+      <div class="container-fluid">
+        <!-- Logo on the left -->
+        <a class="navbar-brand d-flex align-items-center" href="#">
+          <img
+            src="/assets/Logo.png"
+            alt="Logo"
+            style="height: 125px; width: auto; object-fit: contain"
+          />
+        </a>
+
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links on the right -->
+        <div
+          class="collapse navbar-collapse justify-content-end"
+          id="navbarNav"
+        >
+          <ul
+            class="navbar-nav d-flex flex-row gap-5"
+            style="padding-top: 60px; margin-right: 80px"
+          >
+            <li class="nav-item">
+              <a
+                class="nav-link active"
+                href="../index.html"
+                style="font-size: 1.75rem; color: white"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="#"
+                style="font-size: 1.75rem; color: white"
+                >Order</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                href="../pages/ContactPage.html"
+                style="font-size: 1.75rem; color: white"
+                >Contact</a
+              >
+            </li>
+          </ul>
         </div>
+      </div>
     </nav>
 
-<div class="container my-5">
-  <div class="row justify-content-center g-4">
-
-    <!-- Menu Item 1 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 1</h4>
-          <p class="menu-title">Juicy Burger</p>
-          <p class="menu-desc">Delicious burger with fresh ingredients.</p>
-          <p class="menu-price">$8.99</p>
-          <button class="menu-btn">Order Now</button>
+    <div class="container my-5">
+      <div class="row justify-content-center g-4">
+        <!-- Menu Item 1 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 1</h4>
+              <p class="menu-title">Juicy Burger</p>
+              <p class="menu-desc">Delicious burger with fresh ingredients.</p>
+              <p class="menu-price">$8.99</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/assets/closeup.jpg" alt="" />
+            </div>
+          </div>
         </div>
-        <div class="menu-img">
-          <img src="/assets/closeup.jpg" alt="">
+
+        <!-- Menu Item 2 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 2</h4>
+              <p class="menu-title">Cheese Burger Combo</p>
+              <p class="menu-desc">
+                1/4 lb fresh beef patty & American cheese topped with fresh
+                lettuce, tomato, red onion, & our house-made thousand island
+                sauce
+              </p>
+              <p class="menu-price">$10.49</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img
+                src="/assets/Air-Fryer-Quarter-pound-Beef-Burgers-Fries.jpg"
+                alt=""
+              />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 3 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 3</h4>
+              <p class="menu-title">Double Cheese Burger Combo</p>
+              <p class="menu-desc">
+                Two 1/4 lb fresh beef patties & American cheese topped with
+                fresh lettuce, tomato, red onion, & our housemade thousand
+                island sauce
+              </p>
+              <p class="menu-price">$12.49</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/pics/juicyburgerdouble.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 4 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 4</h4>
+              <p class="menu-title">Bacon Cheese Burger</p>
+              <p class="menu-desc">
+                1/4 lb fresh beef patty, beef bacon, onion rings, BBQ sauce,
+                Swiss Cheese and American cheese
+              </p>
+              <p class="menu-price">$11.99</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/pics/bbqbunger.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 5 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 5</h4>
+              <p class="menu-title">Double Bacon Cheese Burger Combo</p>
+              <p class="menu-desc">
+                Two 1/4 lb fresh beef patties & melted American cheese topped
+                with crispy beef bacon, fresh lettuce, tomato, red onion, & our
+                housemade smoky mayo sauce
+              </p>
+              <p class="menu-price">$13.49</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/pics/pastramiburger.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 6 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 6</h4>
+              <p class="menu-title">Pastrami Burger Combo</p>
+              <p class="menu-desc">
+                1/4 lb fresh pastrami slices pickles, onions our home made
+                thousand island sauce and lettuce.
+              </p>
+              <p class="menu-price">$12.99</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/pics/download.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 7 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 7</h4>
+              <p class="menu-title">Veggie Burger Combo</p>
+              <p class="menu-desc">
+                1/4 lb veggie patty topped with lettuce, tomato, pickles, and
+                spicy mayo
+              </p>
+              <p class="menu-price">$9.99</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/pics/veggie.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 8 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 8</h4>
+              <p class="menu-title">Spicy Chicken Sandwich</p>
+              <p class="menu-desc">
+                A crispy spicy chicken fillet with pepper jack cheese & spicy
+                mayo
+              </p>
+              <p class="menu-price">$10.99</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/pics/download (1).jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 9 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 9</h4>
+              <p class="menu-title">Spicy Chicken Cali Sandwich Combo</p>
+              <p class="menu-desc">
+                Grilled chicken with avocado, lettuce, tomato, red onion, and
+                lime mayo
+              </p>
+              <p class="menu-price">$11.99</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/assets/sandwiches-california-chicken.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 10 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 10</h4>
+              <p class="menu-title">Fish Sandwich Combo</p>
+              <p class="menu-desc">
+                Crispy fish fillet with lettuce, tomato, pickles & tartar sauce
+              </p>
+              <p class="menu-price">$10.49</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/assets/fish.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 11 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 11</h4>
+              <p class="menu-title">Philly Cheese Steak Combo</p>
+              <p class="menu-desc">
+                Beef steak with onions, peppers & provolone
+              </p>
+              <p class="menu-price">$12.49</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/assets/Philly-Cheesesteaks-F.jpg" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Menu Item 12 -->
+        <div class="col-md-6">
+          <div class="menu-box">
+            <div class="menu-text">
+              <h4>Number 12</h4>
+              <p class="menu-title">Pastrami Sandwich Combo</p>
+              <p class="menu-desc">
+                Hot pastrami with pickles, onions, lettuce & spicy mustard
+              </p>
+              <p class="menu-price">$11.99</p>
+              <button class="menu-btn">Order Now</button>
+            </div>
+            <div class="menu-img">
+              <img src="/assets/sandwich.png.png" alt="" />
+            </div>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- Menu Item 2 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 2</h4>
-          <p class="menu-title">Cheese Burger Combo</p>
-          <p class="menu-desc">1/4 lb fresh beef patty & American cheese topped with fresh lettuce, tomato, red onion, & our house-made thousand island sauce</p>
-          <p class="menu-price">$10.49</p>
-          <button class="menu-btn">Order Now</button>
+    <!-- Footer Start -->
+<div class="cFootBg">
+    <div class="cContactRow">
+        <div class="cContactCol">
+            <p class="cContactFontC">
+                <span class="cContactTitle">Location</span> <br>
+                Juicy Burger <br>
+                4105 E Main St, <br>
+                Stockton, CA 95215
+            </p>
         </div>
-        <div class="menu-img">
-          <img src="/assets/Air-Fryer-Quarter-pound-Beef-Burgers-Fries.jpg" alt="">
+        <div class="cContactCol">
+            <p class="cContactFontC">
+                <span class="cContactTitle">Contact</span> <br>
+                (209) 475-8184 <br>
+                juicyburger24@gmail.com
+            </p>
         </div>
-      </div>
+        <div class="cContactCol">
+            <p class="cContactFontC">
+                <span class="cContactTitle">Business Hours</span> <br>
+                Monday - Sunday: <br>
+                10:00 am - 11:00 pm
+            </p>
+        </div>
     </div>
-
-    <!-- Menu Item 3 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 3</h4>
-          <p class="menu-title">Double Cheese Burger Combo</p>
-          <p class="menu-desc">Two 1/4 lb fresh beef patties & American cheese topped with fresh lettuce, tomato, red onion, & our housemade thousand island sauce</p>
-          <p class="menu-price">$12.49</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/pics/juicyburgerdouble.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 4 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 4</h4>
-          <p class="menu-title">Bacon Cheese Burger</p>
-          <p class="menu-desc">1/4 lb fresh beef patty, beef bacon, onion rings, BBQ sauce, Swiss Cheese and American cheese</p>
-          <p class="menu-price">$11.99</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/pics/bbqbunger.png" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 5 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 5</h4>
-          <p class="menu-title">Double Bacon Cheese Burger Combo</p>
-          <p class="menu-desc">Two 1/4 lb fresh beef patties & melted American cheese topped with crispy beef bacon, fresh lettuce, tomato, red onion, & our housemade smoky mayo sauce</p>
-          <p class="menu-price">$13.49</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/pics/pastramiburger.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 6 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 6</h4>
-          <p class="menu-title">Pastrami Burger Combo</p>
-          <p class="menu-desc">1/4 lb fresh pastrami slices pickles, onions our home made thousand island sauce and lettuce.</p>
-          <p class="menu-price">$12.99</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/pics/download.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 7 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 7</h4>
-          <p class="menu-title">Veggie Burger Combo</p>
-          <p class="menu-desc">1/4 lb veggie patty topped with lettuce, tomato, pickles, and spicy mayo</p>
-          <p class="menu-price">$9.99</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/pics/veggie.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 8 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 8</h4>
-          <p class="menu-title">Spicy Chicken Sandwich</p>
-          <p class="menu-desc">A crispy spicy chicken fillet with pepper jack cheese & spicy mayo</p>
-          <p class="menu-price">$10.99</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/pics/download (1).jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 9 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 9</h4>
-          <p class="menu-title">Spicy Chicken Cali Sandwich Combo</p>
-          <p class="menu-desc">Grilled chicken with avocado, lettuce, tomato, red onion, and lime mayo</p>
-          <p class="menu-price">$11.99</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/assets/sandwiches-california-chicken.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 10 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 10</h4>
-          <p class="menu-title">Fish Sandwich Combo</p>
-          <p class="menu-desc">Crispy fish fillet with lettuce, tomato, pickles & tartar sauce</p>
-          <p class="menu-price">$10.49</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/assets/fish.png" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 11 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 11</h4>
-          <p class="menu-title">Philly Cheese Steak Combo</p>
-          <p class="menu-desc">Beef steak with onions, peppers & provolone</p>
-          <p class="menu-price">$12.49</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/assets/Philly-Cheesesteaks-F.jpg" alt="">
-        </div>
-      </div>
-    </div>
-
-    <!-- Menu Item 12 -->
-    <div class="col-md-6">
-      <div class="menu-box">
-        <div class="menu-text">
-          <h4>Number 12</h4>
-          <p class="menu-title">Pastrami Sandwich Combo</p>
-          <p class="menu-desc">Hot pastrami with pickles, onions, lettuce & spicy mustard</p>
-          <p class="menu-price">$11.99</p>
-          <button class="menu-btn">Order Now</button>
-        </div>
-        <div class="menu-img">
-          <img src="/assets/sandwich.png.png" alt="">
-        </div>
-      </div>
-    </div>
-
-  </div>
 </div>
+<!-- Footer End -->
 
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
 </html>
