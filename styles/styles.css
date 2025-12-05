@@ -2,7 +2,7 @@
 color : white;
 }
 .splash-container{
-    background-image: url(/assets/burger.png);
+    background-image:   linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(/assets/burger.png);
     height: 700px;
     width: 100%;
     background-size: 100%;
