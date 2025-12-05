@@ -35,12 +35,12 @@
     align-items: center;
 }
 
-.row {
+.contactRow {
     display: flex;
     gap: 50px;
 }
 
-.col {
+.contactCol {
     text-align: center;
 }
 
@@ -217,13 +217,13 @@
         height: 130px;
     }
 
-    .row {
+    .contactRow {
         flex-direction: column;
 
         gap: 20px;
     }
 
-    .col {
+    .contactCol {
         width: 100%;
     }
 
